@@ -100,8 +100,7 @@ var interval = setInterval(function(){
 }
 
 
-//function compararSecuencia(ronda){
-    //const ronda = ronda;
+
     let numeroDeClick = 0;
 
     
@@ -116,10 +115,7 @@ var interval = setInterval(function(){
         if(!(this.id === secuencia[numeroDeClick])){
             $perdiste.innerText = "Perdiste";
             numeroDeClick = 0;
-            /*ronda = 1;
-            secuencia = crearSecuencia(ronda);
-            transformarSecuenciaAPalabras();
-            mostrarSecuencia();*/
+            
             return; 
         }
         numeroDeClick++;
@@ -139,10 +135,7 @@ var interval = setInterval(function(){
         if(!(this.id === secuencia[numeroDeClick])){
             $perdiste.innerText = "Perdiste";
             numeroDeClick = 0;
-            /*ronda = 1;
-            secuencia = crearSecuencia(ronda);
-            transformarSecuenciaAPalabras();
-            mostrarSecuencia();*/
+            
             return; 
         }
         numeroDeClick++;
@@ -155,17 +148,8 @@ var interval = setInterval(function(){
             mostrarSecuencia();
             return;
         }
-        //return false;
+        
     }
 
     
 
-//}
-
-/*
-const $div1 = document.querySelector("#uno");
-$div1.onclick = function(){
-    console.log(this.id);
-    return false;
-}
-*/
