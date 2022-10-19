@@ -65,7 +65,7 @@ function crearSecuencia(ronda){
     }
 
     for(let i = 0; i < ronda; i++){
-        secuencia[i] = getRandomIntInclusive(1, 2);
+        secuencia[i] = getRandomIntInclusive(1, 4);
     }
 
     return secuencia;
@@ -128,9 +128,49 @@ var interval = setInterval(function(){
             mostrarSecuencia();
             return;
         }
-        //return false;
+        
     }
     $div2.onclick = function(){
+        encender(this.id);
+        if(!(this.id === secuencia[numeroDeClick])){
+            $perdiste.innerText = "Perdiste";
+            numeroDeClick = 0;
+            
+            return; 
+        }
+        numeroDeClick++;
+        if(numeroDeClick === ronda){
+            numeroDeClick = 0;
+            ronda++;
+            $ronda.innerText = ronda;
+            secuencia = crearSecuencia(ronda);
+            transformarSecuenciaAPalabras();
+            mostrarSecuencia();
+            return;
+        }
+        
+    }
+    $div3.onclick = function(){
+        encender(this.id);
+        if(!(this.id === secuencia[numeroDeClick])){
+            $perdiste.innerText = "Perdiste";
+            numeroDeClick = 0;
+            
+            return; 
+        }
+        numeroDeClick++;
+        if(numeroDeClick === ronda){
+            numeroDeClick = 0;
+            ronda++;
+            $ronda.innerText = ronda;
+            secuencia = crearSecuencia(ronda);
+            transformarSecuenciaAPalabras();
+            mostrarSecuencia();
+            return;
+        }
+        
+    }
+    $div4.onclick = function(){
         encender(this.id);
         if(!(this.id === secuencia[numeroDeClick])){
             $perdiste.innerText = "Perdiste";
