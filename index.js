@@ -77,14 +77,14 @@ var interval = setInterval(function(){
 
     
 
-    const $div1 = document.querySelector("#uno");
-    const $div2 = document.querySelector("#dos");
-    const $div3 = document.querySelector("#tres");
-    const $div4 = document.querySelector("#cuatro");
+    const $cuadrado1 = document.querySelector("#uno");
+    const $cuadrado2 = document.querySelector("#dos");
+    const $cuadrado3 = document.querySelector("#tres");
+    const $cuadrado4 = document.querySelector("#cuatro");
 
-    $div1.onclick = function(){
-        encender(this.id);
-        if(!(this.id === secuencia[numeroDeClick])){
+    function compararClickConSecuencia(cuadrado){
+        encender(cuadrado.id);
+        if(!(cuadrado.id === secuencia[numeroDeClick])){
             $perdiste.innerText = "Perdiste";
             numeroDeClick = 0;
             
@@ -99,66 +99,21 @@ var interval = setInterval(function(){
             mostrarSecuencia();
             return;
         }
-        
-    }
-    $div2.onclick = function(){
-        encender(this.id);
-        if(!(this.id === secuencia[numeroDeClick])){
-            $perdiste.innerText = "Perdiste";
-            numeroDeClick = 0;
-            
-            return; 
-        }
-        numeroDeClick++;
-        if(numeroDeClick === ronda){
-            numeroDeClick = 0;
-            ronda++;
-            $ronda.innerText = ronda;
-            secuencia = crearSecuencia(ronda);
-            mostrarSecuencia();
-            return;
-        }
-        
-    }
-    $div3.onclick = function(){
-        encender(this.id);
-        if(!(this.id === secuencia[numeroDeClick])){
-            $perdiste.innerText = "Perdiste";
-            numeroDeClick = 0;
-            
-            return; 
-        }
-        numeroDeClick++;
-        if(numeroDeClick === ronda){
-            numeroDeClick = 0;
-            ronda++;
-            $ronda.innerText = ronda;
-            secuencia = crearSecuencia(ronda);
-            mostrarSecuencia();
-            return;
-        }
-        
-    }
-    $div4.onclick = function(){
-        encender(this.id);
-        if(!(this.id === secuencia[numeroDeClick])){
-            $perdiste.innerText = "Perdiste";
-            numeroDeClick = 0;
-            
-            return; 
-        }
-        numeroDeClick++;
-        if(numeroDeClick === ronda){
-            numeroDeClick = 0;
-            ronda++;
-            $ronda.innerText = ronda;
-            secuencia = crearSecuencia(ronda);
-            mostrarSecuencia();
-            return;
-        }
-        
     }
 
-    
+    $cuadrado1.onclick = function(){
+        compararClickConSecuencia(this);
+    }
+    $cuadrado2.onclick = function(){
+        compararClickConSecuencia(this);
+    }
+    $cuadrado3.onclick = function(){
+        compararClickConSecuencia(this);
+    }
+    $cuadrado4.onclick = function(){
+        compararClickConSecuencia(this);
+    }
+
+
 
 
