@@ -60,6 +60,7 @@ function crearSecuencia(ronda){
 }
 
 
+TIEMPO_ENTRE_ENCENDIDOS = 3000;
 
 function mostrarSecuencia(){
 var counter = 0;
@@ -67,7 +68,7 @@ var interval = setInterval(function(){
    encender(secuencia[counter]);
    counter+=1;
    if (counter == (secuencia.length)) { clearInterval(interval); }
-}, 3000);
+}, TIEMPO_ENTRE_ENCENDIDOS);
 }
 
 
