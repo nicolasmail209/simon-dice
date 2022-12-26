@@ -1,0 +1,20 @@
+.cuadrado{
+    height: 100px;
+    width: 100px;
+}
+
+#uno{
+    background-color: rgb(1, 112, 1);
+}
+
+#dos{
+    background-color: rgb(138, 2, 2);
+}
+
+#tres{
+    background-color: rgb(2, 2, 129);
+}
+
+#cuatro{
+    background-color: rgb(151, 151, 3);
+}
