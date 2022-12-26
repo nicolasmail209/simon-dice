@@ -31,19 +31,18 @@ function encender(id){
     
 }
 
+function obtenerEnteroAleatorioInclusivo(min, max) {
+    min = Math.ceil(min);
+    max = Math.floor(max);
+    return Math.floor(Math.random() * (max - min + 1) + min);
+}
 
 function crearSecuencia(ronda){
     
     const secuencia = [];
 
-    function getRandomIntInclusive(min, max) {
-        min = Math.ceil(min);
-        max = Math.floor(max);
-        return Math.floor(Math.random() * (max - min + 1) + min);
-    }
-
     for(let i = 0; i < ronda; i++){
-        secuencia[i] = getRandomIntInclusive(1, 4);
+        secuencia[i] = obtenerEnteroAleatorioInclusivo(1, 4);
     }
 
     return secuencia;
