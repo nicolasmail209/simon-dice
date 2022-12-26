@@ -18,3 +18,19 @@
 #cuatro{
     background-color: rgb(151, 151, 3);
 }
+
+#uno.encendido{
+    background-color: rgb(4, 252, 4);
+}
+
+#dos.encendido{
+    background-color: rgb(241, 3, 3);
+}
+
+#tres.encendido{
+    background-color: rgb(3, 3, 243);
+}
+
+#cuatro.encendido{
+    background-color: rgb(247, 247, 6);
+}

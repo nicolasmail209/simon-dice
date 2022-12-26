@@ -22,34 +22,12 @@ function encender(id){
     
     const $cuadrado = document.querySelector("#" + id);
 
-    if(id === "uno"){
-        $cuadrado.style.backgroundColor = "rgb(4, 252, 4)";
-        
-        setTimeout(() => {
-            $cuadrado.style.backgroundColor = "rgb(1, 112, 1)";
-          }, 2000)
-    }
-    if(id === "dos"){
-        $cuadrado.style.backgroundColor = "rgb(241, 3, 3)";
-        
-        setTimeout(() => {
-            $cuadrado.style.backgroundColor = "rgb(138, 2, 2)";
-          }, 2000)
-    }
-    if(id === "tres"){
-        $cuadrado.style.backgroundColor = "rgb(3, 3, 243)";
-        
-        setTimeout(() => {
-            $cuadrado.style.backgroundColor = "rgb(2, 2, 129)";
-          }, 2000)
-    }
-    if(id === "cuatro"){
-        $cuadrado.style.backgroundColor = "rgb(247, 247, 6)";
-        
-        setTimeout(() => {
-            $cuadrado.style.backgroundColor = "rgb(151, 151, 3)";
-          }, 2000)
-    }
+    $cuadrado.classList.add("encendido");
+
+    setTimeout(() => {
+        $cuadrado.classList.remove("encendido");
+    }, 2000);
+
     
 }
 
@@ -193,4 +171,4 @@ var interval = setInterval(function(){
 
     
 
-    
+
