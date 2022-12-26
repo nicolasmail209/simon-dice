@@ -12,7 +12,6 @@ $empezar.onclick = function(){
     $perdiste.innerText = "";
     $ronda.innerText = ronda;
     secuencia = crearSecuencia(ronda);
-    transformarSecuenciaAPalabras();
     mostrarSecuencia();
 }
 
@@ -43,28 +42,23 @@ function crearSecuencia(ronda){
 
     for(let i = 0; i < ronda; i++){
         secuencia[i] = obtenerEnteroAleatorioInclusivo(1, 4);
+        if(secuencia[i] === 1){
+            secuencia[i] = "uno";
+        }
+        if(secuencia[i] === 2){
+            secuencia[i] = "dos";
+        }
+        if(secuencia[i] === 3){
+            secuencia[i] = "tres";
+        }
+        if(secuencia[i] === 4){
+            secuencia[i] = "cuatro";
+        }
     }
 
     return secuencia;
 }
 
-
-function transformarSecuenciaAPalabras(){
-for(let i = 0; i < secuencia.length; i++){
-    if(secuencia[i] === 1){
-        secuencia[i] = "uno";
-    }
-    if(secuencia[i] === 2){
-        secuencia[i] = "dos";
-    }
-    if(secuencia[i] === 3){
-        secuencia[i] = "tres";
-    }
-    if(secuencia[i] === 4){
-        secuencia[i] = "cuatro";
-    }
-}
-}
 
 
 function mostrarSecuencia(){
@@ -101,7 +95,6 @@ var interval = setInterval(function(){
             ronda++;
             $ronda.innerText = ronda;
             secuencia = crearSecuencia(ronda);
-            transformarSecuenciaAPalabras();
             mostrarSecuencia();
             return;
         }
@@ -121,7 +114,6 @@ var interval = setInterval(function(){
             ronda++;
             $ronda.innerText = ronda;
             secuencia = crearSecuencia(ronda);
-            transformarSecuenciaAPalabras();
             mostrarSecuencia();
             return;
         }
@@ -141,7 +133,6 @@ var interval = setInterval(function(){
             ronda++;
             $ronda.innerText = ronda;
             secuencia = crearSecuencia(ronda);
-            transformarSecuenciaAPalabras();
             mostrarSecuencia();
             return;
         }
@@ -161,7 +152,6 @@ var interval = setInterval(function(){
             ronda++;
             $ronda.innerText = ronda;
             secuencia = crearSecuencia(ronda);
-            transformarSecuenciaAPalabras();
             mostrarSecuencia();
             return;
         }
